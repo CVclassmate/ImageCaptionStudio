@@ -23,7 +23,7 @@ It is designed for preparing image-text datasets for text-to-image models, LoRA 
 
 ## Screenshot
 
-![ImageCaptionStudio](assets/screenshot.png)
+![ImageCaptionStudio](assets/screenshot.jpg)
 
 ## Download
 
