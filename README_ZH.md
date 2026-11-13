@@ -25,7 +25,7 @@ ImageCaptionStudio 是一款基于 Python 和 PySide6 开发的轻量级图片�
 
 ## 软件截图
 
-![ImageCaptionStudio](assets/screenshot.png)
+![ImageCaptionStudio](assets/screenshot.jpg)
 
 ## 下载安装
 
