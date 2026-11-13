@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Caption Studio v1.0</string>
+  </property>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1400</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="actionUiFontSize"/>
+    <addaction name="actionShortcutSettings"/>
+   </widget>
+   <addaction name="menuSettings"/>
+  </widget>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="toolbarLayout">
+      <item>
+       <widget class="QPushButton" name="btnImport">
+        <property name="text">
+         <string>导入图片目录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnImportPrompt">
+        <property name="text">
+         <string>导入Prompt目录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnPrevious">
+        <property name="text">
+         <string>上一张</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNext">
+        <property name="text">
+         <string>下一张</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnZoomIn">
+        <property name="text">
+         <string>放大</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnZoomOut">
+        <property name="text">
+         <string>缩小</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnFit">
+        <property name="text">
+         <string>适应窗口</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSave">
+        <property name="text">
+         <string>保存 Prompt</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="leftPanel">
+       <layout class="QVBoxLayout" name="leftLayout">
+        <item>
+         <widget class="QLabel" name="labelImages">
+          <property name="text">
+           <string>图片列表</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="imageList"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelStats">
+          <property name="text">
+           <string>已标注：0 / 0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="centerPanel">
+       <layout class="QVBoxLayout" name="centerLayout">
+        <item>
+         <widget class="QLabel" name="labelPreview">
+          <property name="text">
+           <string>图片预览</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="viewerContainer" native="true"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelImageInfo">
+          <property name="text">
+           <string>尚未加载图片</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="rightPanel">
+       <layout class="QVBoxLayout" name="rightLayout">
+        <item>
+         <widget class="QLabel" name="labelPrompt">
+          <property name="text">
+           <string>Prompt 标注</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="promptFontSizeLayout">
+          <item>
+           <widget class="QLabel" name="labelPromptFontSize">
+            <property name="text">
+             <string>字号：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinPromptFontSize">
+            <property name="minimum">
+             <number>8</number>
+            </property>
+            <property name="maximum">
+             <number>48</number>
+            </property>
+            <property name="singleStep">
+             <number>1</number>
+            </property>
+            <property name="suffix">
+             <string> pt</string>
+            </property>
+            <property name="value">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="captionEditor">
+          <property name="placeholderText">
+           <string>请输入图片的文本描述...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelCaptionStatus">
+          <property name="text">
+           <string>未标注</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionShortcutSettings">
+   <property name="text">
+    <string>&#x5FEB;&#x6377;&#x952E;...</string>
+   </property>
+  </action>
+  <action name="actionUiFontSize">
+   <property name="text">
+    <string>界面字号</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
